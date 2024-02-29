@@ -95,13 +95,6 @@
       </layout>
      </item>
      <item>
-      <widget class="QCheckBox" name="chk_is_public">
-       <property name="text">
-        <string>Public</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QRadioButton" name="rad_blank_project">
        <property name="text">
         <string>Blank project</string>

@@ -94,7 +94,6 @@ class ProjectSettingsPage(ui_proj_settings, base_proj_settings):
         self.for_current_proj = None
         self.registerField("project_name*", self.project_name_ledit)
         self.registerField("project_owner", self.project_owner_cbo)
-        self.registerField("is_public", self.public_chbox)
         self.populate_namespace_cbo()
         self.path_ok_ledit.setHidden(True)
         self.path_ledit.setReadOnly(True)
@@ -446,7 +445,6 @@ class NewMerginProjectWizard(QWizard):
         self.project_name = None
         self.project_file = None
         self.project_dir = None
-        self.is_public = None
         self.package_data = None
 
         geom = self.settings.value("Mergin/NewProjWizard/geometry", None)
@@ -460,7 +458,6 @@ class NewMerginProjectWizard(QWizard):
         self.project_dir = self.field("project_dir")
         self.project_namespace = self.field("project_owner")
         self.project_name = self.field("project_name")
-        self.is_public = self.field("is_public")
         reload_project = False
         failed_packaging = []
 
